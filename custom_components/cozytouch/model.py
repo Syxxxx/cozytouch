@@ -269,6 +269,15 @@ def get_model_infos(modelId: int, zoneName: str | None = None):
             4: HVACMode.HEAT,
         }
 
+    elif modelId == 1444:
+        modelInfos["name"] = "NAEMA 3 Micro 25"
+        modelInfos["type"] = CozytouchDeviceType.THERMOSTAT
+        modelInfos["overrideModeAvailable"] = True
+        modelInfos["HVACModes"] = {
+            0: HVACMode.OFF,
+            4: HVACMode.HEAT,
+        }
+
     else:
         modelInfos["name"] = "Unknown product (" + str(modelId) + ")"
         modelInfos["type"] = CozytouchDeviceType.UNKNOWN
